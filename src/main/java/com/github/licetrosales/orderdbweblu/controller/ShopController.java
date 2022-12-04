@@ -1,10 +1,6 @@
 package com.github.licetrosales.orderdbweblu.controller;
 
-import com.github.licetrosales.orderdbweblu.model.Order;
-import com.github.licetrosales.orderdbweblu.model.Product;
 import com.github.licetrosales.orderdbweblu.service.ShopService;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,10 +23,14 @@ public class ShopController {
     public List<Product> getAllProducts() {
         return shopService.listProducts();
     }
-
+    // show list of all orders
     @GetMapping("orders")
     public List<Order> getAllOrders() {
         return shopService.listOrders();
     }
+
+
+
+
 
 }
