@@ -11,6 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 
+// @Data: Hier haben wir immer noch setter, getter, toString, equals
+// @NoArgsConstructor & AllArgsConstructoren: Konstruktoren ohne und mit Parametern
 public class Order {
 
     private String id;
