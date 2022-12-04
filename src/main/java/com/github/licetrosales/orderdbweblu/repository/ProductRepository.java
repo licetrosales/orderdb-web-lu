@@ -6,12 +6,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class ProductRespository {
+public class ProductRepository {
 
     private List<Product> products;
 
     // Constructor
-    public ProductRespository(List<Product> products) {
+    public ProductRepository(List<Product> products) {
         this.products = products;
     }
 

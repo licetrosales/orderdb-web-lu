@@ -30,5 +30,12 @@ public class OrderRepository {
         return null;
     }
 
+    // add order
+
+    public Order add(Order orderToAdd){
+         orders.add(orderToAdd);
+        return orderToAdd;
+    }
+
 
 }
