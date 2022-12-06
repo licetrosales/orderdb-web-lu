@@ -6,8 +6,7 @@ import com.github.licetrosales.orderdbweblu.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class ShopServiceTest {
 
@@ -34,5 +33,11 @@ class ShopServiceTest {
         //THEN
         //Ergebnisse vergleichen - result mit Order mit der Id 1
         assertEquals(expectedOrder, result);
+<<<<<<< HEAD
+=======
+
+        // Wurde eine bestimmte Methode aufgerufen?
+        verify(orderRepository).get(orderId1);
+>>>>>>> d514f64 (Add test getOrder)
     }
 }
