@@ -33,11 +33,9 @@ class ShopServiceTest {
         //THEN
         //Ergebnisse vergleichen - result mit Order mit der Id 1
         assertEquals(expectedOrder, result);
-<<<<<<< HEAD
-=======
 
         // Wurde eine bestimmte Methode aufgerufen?
         verify(orderRepository).get(orderId1);
->>>>>>> d514f64 (Add test getOrder)
+
     }
 }
