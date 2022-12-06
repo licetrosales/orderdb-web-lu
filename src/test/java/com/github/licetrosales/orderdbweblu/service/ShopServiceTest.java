@@ -1,9 +1,13 @@
 package com.github.licetrosales.orderdbweblu.service;
 
 import com.github.licetrosales.orderdbweblu.model.Order;
+import com.github.licetrosales.orderdbweblu.model.Product;
 import com.github.licetrosales.orderdbweblu.repository.OrderRepository;
 import com.github.licetrosales.orderdbweblu.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
+
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -36,6 +40,29 @@ class ShopServiceTest {
 
         // Wurde eine bestimmte Methode aufgerufen?
         verify(orderRepository).get(orderId1);
+
+    }
+
+    @Test
+    void addOrder_shouldAddOrder_whenOrderIsValid() {
+
+        //GIVEN
+        String orderId1 = "1";
+
+        List<String > ids = Collections.emptyList();
+        Order orderExpected = new Order(orderId1, Collections.emptyList());
+
+                when(shopService.addOrder(orderId1, ids)).thenReturn(orderExpected);
+
+        // WHEN
+        Order result = shopService.addOrder(orderId1,ids);
+
+        //THEN
+        assertEquals(orderExpected, result);
+
+
+
+
 
     }
 }
