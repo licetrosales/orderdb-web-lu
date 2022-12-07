@@ -1,6 +1,7 @@
 package com.github.licetrosales.orderdbweblu.service;
 
 import com.github.licetrosales.orderdbweblu.model.Order;
+import com.github.licetrosales.orderdbweblu.model.Product;
 import com.github.licetrosales.orderdbweblu.repository.OrderRepository;
 import com.github.licetrosales.orderdbweblu.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
@@ -113,7 +114,7 @@ class ShopServiceTest {
 
         //THEN
         assertEquals(orderExpected, result);
-        verify(productRepository).list();
+        verify(orderRepository).add(orderExpected);
     }
 
     @Test
@@ -135,7 +136,8 @@ class ShopServiceTest {
         //THEN
 
         assertEquals(expected, result);
-
+        verify(orderRepository).add(expected);
+        verify(productRepository).get(ids.get(0));
 
     }
 
